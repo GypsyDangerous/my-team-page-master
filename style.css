@@ -1,0 +1,95 @@
+body {
+  margin: 5rem auto;
+  max-width: 1000px;
+  font-family: PT Serif;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: var(--dir, row);
+}
+
+.title {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.045em;
+  text-align: left;
+  text-transform: capitalize;
+  margin-right: 1rem;
+}
+.description .title {
+  text-transform: uppercase;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description {
+  margin-top: var(--mt, 0px);
+  max-width: 440px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.team {
+  --columns: 3;
+  --odd: 5rem;
+  margin-top: 5rem;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(var(--columns), 1fr);
+}
+.team .team__card {
+  display: flex;
+}
+.team .team__card:nth-child(2), .team .team__card:nth-child(5) {
+  margin-top: var(--odd);
+}
+.team .team__card .team__card__name {
+  font-family: Poppins;
+  font-weight: bold;
+}
+.team .team__card .team__card__job {
+  writing-mode: vertical-rl;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: -2rem;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  color: #a9a9a9;
+}
+
+@media screen and (max-width: 650px) {
+  header {
+    --dir: column;
+  }
+
+  .team {
+    --columns: 2;
+    --odd: 0rem;
+  }
+  .team .team__card:nth-child(even) {
+    margin-top: 5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
